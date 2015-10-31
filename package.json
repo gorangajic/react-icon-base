@@ -1,6 +1,6 @@
 {
   "name": "react-icon-base",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "base element for react-icons",
   "main": "lib/index.js",
   "jsnext:main": "index.js",
