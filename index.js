@@ -3,13 +3,15 @@ import React from 'react';
 class IconBase extends React.Component {
     render() {
         let styles = {
-            fill: "#000",
             verticalAlign: "middle",
+        };
+        var props = {
+            fill: "#000",
             width: this.props.size,
             height: this.props.size
-        };
+        }
         return (
-            <svg viewBox={this.props.viewBox}
+            <svg viewBox={this.props.viewBox} {...props} {...this.props}
                  preserveAspectRatio="xMidYMid meet" fit
                  style={{...styles, ...this.props.style}} >
                 {this.props.children}
