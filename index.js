@@ -11,7 +11,7 @@ class IconBase extends React.Component {
             height: this.props.size
         }
         return (
-            <svg viewBox={this.props.viewBox} {...props} {...this.props}
+            <svg {...props} {...this.props}
                  preserveAspectRatio="xMidYMid meet" fit
                  style={{...styles, ...this.props.style}} >
                 {this.props.children}
