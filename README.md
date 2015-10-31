@@ -4,7 +4,9 @@
 
 ### instalation
 
+```
 npm install react-icon-base --save
+```
 
 
 ### Usage
