@@ -6,7 +6,7 @@ class IconBase extends React.Component {
             verticalAlign: "middle",
         };
         var props = {
-            fill: "#000",
+            fill: "currentColor",
             width: this.props.size,
             height: this.props.size
         }
