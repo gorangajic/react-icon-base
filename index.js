@@ -21,7 +21,7 @@ class IconBase extends React.Component {
 };
 
 IconBase.defaultProps = {
-    size: 24
+    size: '1em'
 };
 
 IconBase.propTypes = {
