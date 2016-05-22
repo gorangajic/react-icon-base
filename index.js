@@ -1,35 +1,39 @@
-import React from 'react';
+import { default as React, PropTypes } from 'react'
+const defaultSize = '1em'
 
-class IconBase extends React.Component {
-    render() {
-        let styles = {
-            verticalAlign: "middle",
-        };
-        var props = {
-            fill: "currentColor",
-            width: this.props.size,
-            height: this.props.size
-        }
-        return (
-            <svg {...props} {...this.props}
-                 preserveAspectRatio="xMidYMid meet" fit
-                 style={{...styles, ...this.props.style}} >
-                {this.props.children}
-            </svg>
-        );
+const IconBase = ({ children, size, style, ...props }, { reactIconBase }) => {
+    const computedSize = size ? size : (reactIconBase && reactIconBase.size || defaultSize)
+    const computedStyle = {
+        verticalAlign: "middle",
+        ...(reactIconBase && reactIconBase.style || {}),
+        ...style
     }
-};
+    return (
+        <svg
+            fill="currentColor"
+            fit
+            height={computedSize}
+            width={computedSize}
+            {...props}
+            {...reactIconBase}
+            preserveAspectRatio="xMidYMid meet"
+            style={computedStyle}
+        >
+            {children}
+        </svg>
+    )
+}
 
-IconBase.defaultProps = {
-    size: '1em'
-};
+IconBase.contextTypes = {
+    reactIconBase: PropTypes.object
+}
 
 IconBase.propTypes = {
-    size: React.PropTypes.oneOfType([
-        React.PropTypes.string,
-        React.PropTypes.number
+    size: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number
     ]),
-    style: React.PropTypes.object
-};
+    style: PropTypes.object
+}
 
-export default IconBase;
+export default IconBase
