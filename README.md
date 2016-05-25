@@ -2,7 +2,7 @@
 
 > base element for [react-icons](https://github.com/gorangajic/react-icons)
 
-### instalation
+### Installation
 
 ```
 npm install react-icon-base --save
@@ -25,7 +25,37 @@ export default class FaHeart extends React.Component {
         );
     }
 }
+```
 
+### Configuration
+You can configure react-icon-base props in context.
+
+```javascript
+class Theme extends Component {
+
+    static childContextTypes = {
+        reactIconBase: PropTypes.object
+    };
+
+    getChildContext() {
+        return {
+            reactIconBase: {
+                color: 'tomato',
+                size: 24,
+                style: {
+                    ...
+                }
+            }
+        }
+    }
+}
+```
+
+And you can override context props at the instance level.
+
+```javascript
+const MyIcon = () =>
+    <Icon size={30} color='aliceblue' style={{ ... }} />
 ```
 
 ### Licence
