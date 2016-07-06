@@ -14,7 +14,6 @@ const IconBase = ({ children, color, size, style, ...props }, { reactIconBase })
     return (
         <svg
             fill="currentColor"
-            fit
             preserveAspectRatio="xMidYMid meet"
             height={computedSize}
             width={computedSize}
