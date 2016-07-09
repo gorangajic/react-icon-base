@@ -11,10 +11,9 @@ npm install react-icon-base --save
 
 ### Usage
 
-```javascript
-
-let React = require('react');
-let IconBase = require('react-icon-base');
+```js
+import { default as React } from 'react'
+import { default as IconBase } from 'react-icon-base'
 
 export default class FaHeart extends React.Component {
     render() {
@@ -22,7 +21,7 @@ export default class FaHeart extends React.Component {
             <IconBase viewBox="0 0 1792 1896.0833" {...this.props}>
                 <g><path d="m896 1664q-26 0-44-18l-624-602q-10-8-27.5-26t-55.5-65.5-68-97.5-53.5-121-23.5-138q0-220 127-344t351-124q62 0 126.5 21.5t120 58 95.5 68.5 76 68q36-36 76-68t95.5-68.5 120-58 126.5-21.5q224 0 351 124t127 344q0 221-229 450l-623 600q-18 18-44 18z"/></g>
             </IconBase>
-        );
+        )
     }
 }
 ```
@@ -30,7 +29,7 @@ export default class FaHeart extends React.Component {
 ### Configuration
 You can configure react-icon-base props in context.
 
-```javascript
+```js
 class Theme extends Component {
 
     static childContextTypes = {
@@ -51,11 +50,10 @@ class Theme extends Component {
 }
 ```
 
-And you can override context props at the instance level.
+Context can be overriden inline, like so:
 
-```javascript
-const MyIcon = () =>
-    <Icon size={30} color='aliceblue' style={{ ... }} />
+```js
+<Icon size={30} color='aliceblue' style={{ ... }} />
 ```
 
 ### Licence
