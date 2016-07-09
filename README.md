@@ -30,7 +30,7 @@ export default class FaHeart extends React.Component {
 You can configure react-icon-base props in context.
 
 ```js
-class Theme extends Component {
+class HigherOrderComponent extends Component {
 
     static childContextTypes = {
         reactIconBase: PropTypes.object
@@ -46,6 +46,10 @@ class Theme extends Component {
                 }
             }
         }
+    }
+
+    render() {
+        ...
     }
 }
 ```
