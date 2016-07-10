@@ -1,6 +1,11 @@
 ## react-icon-base
 
-> base element for [react-icons](https://github.com/gorangajic/react-icons)
+[![npm][npm-image]][npm-url]
+
+[npm-image]: https://img.shields.io/npm/v/react-icon-base.svg?style=flat-square
+[npm-url]: https://www.npmjs.com/package/react-icon-base
+
+base element for [react-icons](https://github.com/gorangajic/react-icons)
 
 ### Installation
 
