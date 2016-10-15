@@ -3,7 +3,6 @@
   "version": "2.0.3",
   "description": "base element for react-icons",
   "main": "lib/index.js",
-  "jsnext:main": "index.js",
   "scripts": {
     "lint": "standard",
     "build": "babel index.js --out-dir lib",
