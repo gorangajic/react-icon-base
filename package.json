@@ -74,5 +74,8 @@
       "subjectPatternErrorMsg": "subject does not match subject pattern!",
       "helpMessage": ""
     }
+  },
+  "dependencies": {
+    "prop-types": "15.5.8"
   }
 }
