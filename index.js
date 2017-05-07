@@ -1,5 +1,5 @@
 import { default as React } from 'react'
-import { PropTypes } from 'prop-types'
+import PropTypes from 'prop-types'
 const IconBase = ({ children, color, size, style, ...props }, { reactIconBase = {} }) => {
   const computedSize = size || reactIconBase.size || '1em'
   return (
