@@ -39,6 +39,7 @@
     "mocha": "^2.5.3",
     "react": "^15.2.1",
     "react-addons-test-utils": "^15.2.1",
+    "prop-types": "15.5.8",
     "standard": "^7.1.2",
     "validate-commit-msg": "^2.6.1"
   },
@@ -74,8 +75,5 @@
       "subjectPatternErrorMsg": "subject does not match subject pattern!",
       "helpMessage": ""
     }
-  },
-  "dependencies": {
-    "prop-types": "15.5.8"
   }
 }
