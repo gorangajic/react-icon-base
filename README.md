@@ -17,8 +17,8 @@ npm install react-icon-base --save
 ### Usage
 
 ```js
-import { default as React } from 'react'
-import { default as IconBase } from 'react-icon-base'
+import React from 'react'
+import IconBase from 'react-icon-base'
 
 export default class FaHeart extends React.Component {
     render() {
