@@ -1,8 +1,21 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const IconBase = ({ children, color, size, style, width, height, ...props }, { reactIconBase = {} }) => {
+const IconBase = ({ children, color, size, style = {}, width, height, ...props }, { reactIconBase = {} }) => {
   const computedSize = size || reactIconBase.size || '1em'
+
+  const baseStyle = reactIconBase.style || {}
+  const styleProp = {
+    verticalAlign: 'middle',
+    ...baseStyle,
+    ...style
+  }
+
+  const computedColor = color || style.color || reactIconBase.color || baseStyle.color
+  if (computedColor) {
+    styleProp.color = computedColor
+  }
+
   return (
     <svg
       children={children}
@@ -12,12 +25,7 @@ const IconBase = ({ children, color, size, style, width, height, ...props }, { r
       width={width || computedSize}
       {...reactIconBase}
       {...props}
-      style={{
-        verticalAlign: 'middle',
-        color: color || reactIconBase.color,
-        ...(reactIconBase.style || {}),
-        ...style
-      }}
+      style={styleProp}
     />
   )
 }
