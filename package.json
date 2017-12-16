@@ -46,7 +46,6 @@
     "validate-commit-msg": "^2.6.1"
   },
   "peerDependencies": {
-    "prop-types": "*",
     "react": "*"
   },
   "standard": {
