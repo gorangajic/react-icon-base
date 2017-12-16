@@ -1,16 +1,14 @@
-import { default as React } from 'react'
-import { default as TestUtils } from 'react-addons-test-utils'
-import { default as expect } from 'expect'
-import { default as IconBase } from '..'
-
-const renderer = TestUtils.createRenderer()
+import React from 'react'
+import ReactTestRenderer from 'react-test-renderer'
+import expect from 'expect'
+import IconBase from '..'
 
 describe('IconBase', () => {
   let outer
 
   beforeEach(() => {
-    renderer.render(<IconBase />)
-    outer = renderer.getRenderOutput()
+    const renderer = ReactTestRenderer.create(<IconBase />)
+    outer = renderer.toJSON()
   })
 
   it('renders svg', () => {
