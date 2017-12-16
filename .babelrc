@@ -1,6 +1,28 @@
 {
- "presets": ["react", "es2015", "stage-0"],
- "plugins": [
-    "add-module-exports"
-  ]
+  "presets": [
+    "react"
+  ],
+  "plugins": [
+    "transform-object-rest-spread"
+  ],
+
+  "env": {
+    "development": {
+      "presets": [
+        ["env", {
+          "modules": "commonjs"
+        }]
+      ],
+      "plugins": [
+        "add-module-exports"
+      ]
+    },
+    "es": {
+      "presets": [
+        ["env", {
+          "modules": false
+        }]
+      ]
+    }
+  }
 }
